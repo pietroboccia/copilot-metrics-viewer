@@ -43,7 +43,7 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     env:
-      VUE_APP_GITHUB_TOKEN: ${{ secret.VUE_APP_GITHUB_TOKEN }}
+      VUE_APP_GITHUB_TOKEN: ${{ secrets.VUE_APP_GITHUB_TOKEN }}
     
     steps:
       - name: Download artifact from build job
