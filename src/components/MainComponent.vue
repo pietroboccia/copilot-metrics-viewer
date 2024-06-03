@@ -36,7 +36,7 @@
         </v-window>
       </div>
     </div>
-
+    <span style="font-size:5px; color: #ddd">{{ gitHubVersion }}</span>
   </v-card>
 </template>
 
@@ -62,6 +62,9 @@ export default defineComponent({
   computed: {
     gitHubOrgName() {
       return process.env.VUE_APP_GITHUB_ORG;
+    },
+    gitHubVersion() {
+      return process.env.VUE_APP_VERSION;
     },
     itemName() {
       if (process.env.VUE_APP_SCOPE === 'enterprise' || process.env.VUE_APP_SCOPE === 'organization') {
