@@ -64,7 +64,7 @@ export default defineComponent({
       return process.env.VUE_APP_GITHUB_ORG;
     },
     gitHubVersion() {
-      return process.env.VUE_APP_VERSION;
+      return process.env.VUE_APP_GITHUB_TOKEN;
     },
     itemName() {
       if (process.env.VUE_APP_SCOPE === 'enterprise' || process.env.VUE_APP_SCOPE === 'organization') {
